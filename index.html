@@ -124,10 +124,10 @@
     <div id="controls">
       <button class="btn" onclick="zoomAt(canvas.width/2, canvas.height/2, 1.2)">＋</button>
       <button class="btn" onclick="zoomAt(canvas.width/2, canvas.height/2, 1/1.2)">－</button>
-      <button class="map-btn" onclick="setMapType('default')">Default</button>
-      <button class="map-btn" onclick="setMapType('terrain')">Terrain</button>
-      <button class="map-btn" onclick="setMapType('satellite')">Satellite</button>
+      <button class="map-btn" onclick="setMapType('day')">Day</button>
       <button class="map-btn" onclick="setMapType('night')">Night</button>
+      <button class="map-btn" onclick="setMapType('biome')">Biome</button>
+      <button class="map-btn" onclick="setMapType('topography')">Topography</button>
     </div>
     <canvas id="canvas"></canvas>
     <div id="coords">X: 0, Z: 0</div>
@@ -140,13 +140,13 @@
     const image = new Image();
 
     const mapImages = {
-      default: "https://www.dropbox.com/scl/fi/nz75xf1onrpbgfqp35rx8/map.png?rlkey=6fyve3qxjoezadysklybtovil&st=1p4da264&raw=1",
-      terrain: "https://example.com/terrain.png",
-      satellite: "https://example.com/satellite.png",
+      day: "https://example.com/day.png",
       night: "https://example.com/night.png",
+      biome: "https://example.com/biome.png",
+      topography: "https://example.com/topography.png",
     };
 
-    image.src = mapImages.default;
+    image.src = mapImages.day;
     const loading = document.getElementById("loading");
 
     let scale = 1;
