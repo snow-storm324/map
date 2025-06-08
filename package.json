@@ -1,0 +1,23 @@
+{
+  "name": "website",
+  "version": "1.0.0",
+  "main": "autopush.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/snow-storm324/map.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/snow-storm324/map/issues"
+  },
+  "homepage": "https://github.com/snow-storm324/map#readme",
+  "description": "",
+  "dependencies": {
+    "chokidar": "^4.0.3"
+  }
+}
