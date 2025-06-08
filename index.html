@@ -52,6 +52,20 @@
       background: #ddd;
     }
 
+    .map-btn {
+      background: rgba(255, 255, 255, 0.8);
+      border: 1px solid #ccc;
+      padding: 6px 10px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 4px;
+      user-select: none;
+    }
+
+    .map-btn:active {
+      background: #ddd;
+    }
+
     #coords {
       position: absolute;
       bottom: 10px;
@@ -110,6 +124,10 @@
     <div id="controls">
       <button class="btn" onclick="zoomAt(canvas.width/2, canvas.height/2, 1.2)">＋</button>
       <button class="btn" onclick="zoomAt(canvas.width/2, canvas.height/2, 1/1.2)">－</button>
+      <button class="map-btn" onclick="setMapType('default')">Default</button>
+      <button class="map-btn" onclick="setMapType('terrain')">Terrain</button>
+      <button class="map-btn" onclick="setMapType('satellite')">Satellite</button>
+      <button class="map-btn" onclick="setMapType('night')">Night</button>
     </div>
     <canvas id="canvas"></canvas>
     <div id="coords">X: 0, Z: 0</div>
@@ -120,7 +138,15 @@
     const ctx = canvas.getContext("2d");
     const coordsDisplay = document.getElementById("coords");
     const image = new Image();
-    image.src = "https://www.dropbox.com/scl/fi/nz75xf1onrpbgfqp35rx8/map.png?rlkey=6fyve3qxjoezadysklybtovil&st=1p4da264&raw=1"; // Your map image
+
+    const mapImages = {
+      default: "https://www.dropbox.com/scl/fi/nz75xf1onrpbgfqp35rx8/map.png?rlkey=6fyve3qxjoezadysklybtovil&st=1p4da264&raw=1",
+      terrain: "https://example.com/terrain.png",
+      satellite: "https://example.com/satellite.png",
+      night: "https://example.com/night.png",
+    };
+
+    image.src = mapImages.default;
     const loading = document.getElementById("loading");
 
     let scale = 1;
@@ -270,6 +296,11 @@
       }
       lastTap = currentTime;
     });
+
+    function setMapType(type) {
+      loading.style.display = "flex";
+      image.src = mapImages[type];
+    }
 
     image.onload = () => {
       loading.style.display = "none";
