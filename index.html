@@ -129,16 +129,16 @@
       <button class="btn" onclick="zoomAt(canvas.width/2, canvas.height/2, 1.2)">＋</button>
       <button class="btn" onclick="zoomAt(canvas.width/2, canvas.height/2, 1/1.2)">－</button>
       <button class="map-btn" onclick="setMapType('day')" title="Day">
-        <img src="https://www.dropbox.com/scl/fi/YOUR_DAY_ICON_ID/day.png?rlkey=your-key&raw=1" alt="Day" />
+        <img src="https://www.dropbox.com/scl/fi/zggw9afehfbtbhneg539w/sun-icon.png?rlkey=belai3mnhr6agcvyzpyc3b18m&raw=1" alt="Day" />
       </button>
       <button class="map-btn" onclick="setMapType('night')" title="Night">
-        <img src="https://www.dropbox.com/scl/fi/YOUR_NIGHT_ICON_ID/night.png?rlkey=your-key&raw=1" alt="Night" />
+        <img src="https://www.dropbox.com/scl/fi/2roydxv6cvwzuo60in1ob/moon-icon.png?rlkey=fz2oftrmza8dlb3kzn6tkbkxb&raw=1" alt="Night" />
       </button>
       <button class="map-btn" onclick="setMapType('biome')" title="Biome">
-        <img src="https://www.dropbox.com/scl/fi/YOUR_BIOME_ICON_ID/biome.png?rlkey=your-key&raw=1" alt="Biome" />
+        <img src="https://www.dropbox.com/scl/fi/vss49yxia3yj1mfkjwixq/biomes-icon.png?rlkey=xkw4ixvnd4ws4a5zfvhczeoli&raw=1" alt="Biome" />
       </button>
       <button class="map-btn" onclick="setMapType('topography')" title="Topography">
-        <img src="https://www.dropbox.com/scl/fi/YOUR_TOPO_ICON_ID/topography.png?rlkey=your-key&raw=1" alt="Topography" />
+        <img src="https://www.dropbox.com/scl/fi/fyzcn6rn7hu0ynmjh1598/topograpy-icon.png?rlkey=n0m5veqs85nqdcr9r1na7rl8m&raw=1" alt="Topography" />
       </button>
     </div>
     <canvas id="canvas"></canvas>
@@ -152,10 +152,10 @@
     const image = new Image();
 
     const mapImages = {
-      day: "https://www.dropbox.com/scl/fi/your-day-id/day.png?rlkey=your-key&raw=1",
-      night: "https://www.dropbox.com/scl/fi/your-night-id/night.png?rlkey=your-key&raw=1",
-      biome: "https://www.dropbox.com/scl/fi/your-biome-id/biome.png?rlkey=your-key&raw=1",
-      topography: "https://www.dropbox.com/scl/fi/your-topo-id/topography.png?rlkey=your-key&raw=1",
+      day: "https://www.dropbox.com/scl/fi/8wegkggbxc6gvr95msywx/day-map.png?rlkey=24x1w2n2ile64oodoabh68ot5&raw=1",
+      night: "https://www.dropbox.com/scl/fi/htcrmw5g4jo5qh3dq9ee1/night-map.png?rlkey=k9oj0dcmzhtog71ttjiehjt6c&raw=1",
+      biome: "https://www.dropbox.com/scl/fi/79phevd58g1eeaew5hha1/biome-map.png?rlkey=iwl1flthwain62iuyeaqpcpp2&raw=1",
+      topography: "https://www.dropbox.com/scl/fi/o8nnu9poupas8po6j7u5t/topo-map.png?rlkey=jfq2sxyqxy6pchmb5ghqcej21&raw=1",
     };
 
     image.src = mapImages.day;
