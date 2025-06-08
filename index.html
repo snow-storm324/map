@@ -65,6 +65,10 @@
     .map-btn:active {
       background: #ddd;
     }
+    .map-btn img {
+      width: 24px;
+      height: 24px;
+    }
 
     #coords {
       position: absolute;
@@ -124,10 +128,18 @@
     <div id="controls">
       <button class="btn" onclick="zoomAt(canvas.width/2, canvas.height/2, 1.2)">＋</button>
       <button class="btn" onclick="zoomAt(canvas.width/2, canvas.height/2, 1/1.2)">－</button>
-      <button class="map-btn" onclick="setMapType('day')">Day</button>
-      <button class="map-btn" onclick="setMapType('night')">Night</button>
-      <button class="map-btn" onclick="setMapType('biome')">Biome</button>
-      <button class="map-btn" onclick="setMapType('topography')">Topography</button>
+      <button class="map-btn" onclick="setMapType('day')" title="Day">
+        <img src="icons/day.png" alt="Day" />
+      </button>
+      <button class="map-btn" onclick="setMapType('night')" title="Night">
+        <img src="icons/night.png" alt="Night" />
+      </button>
+      <button class="map-btn" onclick="setMapType('biome')" title="Biome">
+        <img src="icons/biome.png" alt="Biome" />
+      </button>
+      <button class="map-btn" onclick="setMapType('topography')" title="Topography">
+        <img src="icons/topography.png" alt="Topography" />
+      </button>
     </div>
     <canvas id="canvas"></canvas>
     <div id="coords">X: 0, Z: 0</div>
